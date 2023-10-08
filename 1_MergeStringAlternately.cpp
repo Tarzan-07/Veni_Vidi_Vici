@@ -20,11 +20,11 @@ public:
         }
         if(mini == word1.length())
         {
-            res += word2.substr(i+1, word2.length()-(i+1));
+            res += word2.substr(i, word2.length()-(i));
         }
         else
         {
-            res += word1.substr(i+1, word2.length()-(i+1));
+            res += word1.substr(i, word1.length()-(i));
         }
         return res;
     }
@@ -33,7 +33,7 @@ public:
 int main()
 {
     Solution s;
-    string results = s.mergeAlternately("abc", "pqr");
+    string results = s.mergeAlternately("abcd", "pq");
     cout << results << endl;
     return 0;
 }
